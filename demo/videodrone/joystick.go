@@ -31,31 +31,29 @@ func init() {
 }
 
 func startJoystick() {
-	stick.On(joystick.CirclePress, func(data interface{}) {
-		drone.Forward(0)
-		drone.Up(0)
-		drone.Clockwise(0)
-	})
 	stick.On(joystick.SquarePress, func(data interface{}) {
 		fmt.Println("battery:", flightData.BatteryPercentage)
 	})
+
 	stick.On(joystick.TrianglePress, func(data interface{}) {
 		drone.ThrowTakeOff()
 		println("Takeoff")
 	})
+
 	stick.On(joystick.XPress, func(data interface{}) {
 		drone.PalmLand()
 		println("Land")
 	})
+
 	stick.On(joystick.CirclePress, func(data interface{}) {
 		drone.PalmLand()
 		println("Land")
 	})
+
 	stick.On(joystick.LeftX, func(data interface{}) {
 		val := float64(data.(int))
 		leftX.Store(val)
 	})
-
 	stick.On(joystick.LeftY, func(data interface{}) {
 		val := float64(data.(int))
 		leftY.Store(val)
@@ -65,11 +63,11 @@ func startJoystick() {
 		val := float64(data.(int))
 		rightX.Store(val)
 	})
-
 	stick.On(joystick.RightY, func(data interface{}) {
 		val := float64(data.(int))
 		rightY.Store(val)
 	})
+
 	gobot.Every(50*time.Millisecond, func() {
 		rightStick := getRightStick()
 

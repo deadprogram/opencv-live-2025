@@ -30,10 +30,8 @@ asciify:
 mosaic:
 	wasmvision run -p mosaic -logging=error
 
-ollama:
-#	wasmvision run -p ollama -c model="qnguyen3/nanollava" -logging=error
+captions:
 	wasmvision run -f ./demo/creativecaptions/config.toml
 
 dronestream:
-#	wasmvision run -p facedetectyn --capture ffmpeg --source udp://127.0.0.1:6789
 	wasmvision run -f ./demo/videodrone/config.toml
