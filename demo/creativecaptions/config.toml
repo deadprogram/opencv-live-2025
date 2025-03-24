@@ -1,0 +1,21 @@
+[main]
+logging = "warn"
+destination = ":8080"
+
+[processing]
+pipeline = [
+    "ollama.wasm",
+    "mosaic.wasm",
+    "captions.wasm"
+]
+configuration = [
+    "model=qnguyen3/nanollava"
+]
+download = true
+
+[models]
+download = true
+
+[server]
+mcp-enable = false
+mcp-port = ":5001"

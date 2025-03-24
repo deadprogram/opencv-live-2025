@@ -1,0 +1,12 @@
+project_name: videodrone
+
+pre_window: gvm use go1.23
+
+windows:
+  - main:
+      layout: main-vertical
+      panes:
+        - drone:
+          - make videodrone
+        - wasmvision:
+          - make dronestream
