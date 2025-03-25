@@ -3,9 +3,9 @@ flowchart LR
     subgraph wasmVision engine
         Capture
         Runtime[WASM Runtime]
-        Runtime<-->OpenCV
         Capture--frame-->Runtime
         Capture<-->OpenCV
+        Runtime<-->OpenCV
         Config
         Datastore
         OpenCV<--DNN-->DNN[Mosaic - Fast Neural Style Transfer Model]
@@ -22,4 +22,6 @@ flowchart LR
     ollama.wasm<-->Config
     ollama.wasm<-->Datastore
     captions.wasm<-->Datastore
+    OpenCV<--CUDA-->GPU
+    ollama<--CUDA-->GPU
 ```

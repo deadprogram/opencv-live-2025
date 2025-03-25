@@ -1,6 +1,7 @@
 [main]
 logging = "warn"
 destination = ":8080"
+cuda-enable = true
 
 [processing]
 pipeline = [
@@ -11,7 +12,6 @@ pipeline = [
 configuration = [
     "model=qnguyen3/nanollava"
 ]
-download = true
 
 [models]
 download = true

@@ -46,8 +46,8 @@ func startJoystick() {
 	})
 
 	stick.On(joystick.CirclePress, func(data interface{}) {
-		drone.PalmLand()
-		println("Land")
+		drone.FrontFlip()
+		println("FrontFlip")
 	})
 
 	stick.On(joystick.LeftX, func(data interface{}) {

@@ -2,12 +2,12 @@
 logging = "warn"
 source = "udp://127.0.0.1:6789"
 capture = "ffmpeg"
+cuda-enable = true
 
 [processing]
 pipeline = [
     "facedetectyn.wasm"
 ]
-download = true
 
 [models]
 download = true

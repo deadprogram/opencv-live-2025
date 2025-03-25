@@ -17,6 +17,7 @@ subgraph wasmVision engine
     Runtime<-->OpenCV
     OpenCV<--DNN-->YuNet[YuNet Face Detection Model]
 end
+OpenCV<--CUDA-->GPU
 subgraph wasmVision processors
     Runtime--frame-->facedetectyn.wasm
 end
