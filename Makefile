@@ -4,7 +4,7 @@ hello:
 	go run ./demo/hello 2
 
 yolo:
-	go run ./demo/yolo-detection 0 /home/ron/models/yolov8s.onnx cuda cuda
+	go run ./demo/yolo-detection 2 /home/ron/models/yolov8s.onnx cuda cuda
 
 clean:
 	rm -rf build
@@ -13,19 +13,16 @@ builddir:
 	mkdir -p build
 
 blur:
-	wasmvision run -p blur -logging=error
+	wasmvision run -p blur -logging=error --source 2
 
 blurrs:
-	wasmvision run -p blurrs -logging=error
+	wasmvision run -p blurrs -logging=error --source 2
 
 blurc:
-	wasmvision run -p blurc -logging=error
+	wasmvision run -p blurc -logging=error --source 2
 
 asciify:
-	wasmvision run -p asciify -logging=error
-
-mosaic:
-	wasmvision run -p mosaic -logging=error
+	wasmvision run -p asciify -logging=error --source 2
 
 captions:
 	wasmvision run -f ./demo/creativecaptions/config.yaml

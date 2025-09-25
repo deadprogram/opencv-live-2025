@@ -1,4 +1,5 @@
 main:
+  source: "2"
   logging: "info"
   destination: ":8080"
   cuda-enable: true
@@ -11,7 +12,7 @@ processing:
 
 configuration:
   ollama-model: "qnguyen3/nanollava"
-  ollama-prompt: "Describe this scene in a very complimentary way using 7 words or less."
+  ollama-prompt: "Describe this scene in a complimentary way with a single short sentence."
   caption-line-height: "30"
   caption-size: "0.8"
 
