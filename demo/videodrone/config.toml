@@ -3,15 +3,17 @@ logging = "warn"
 source = "udp://127.0.0.1:6789"
 capture = "ffmpeg"
 cuda-enable = true
+datastorage = "boltdb"
 
 [processing]
 pipeline = [
-    "facedetectyn.wasm"
+    "facedetectyn.wasm",
+    "face-counter.wasm",
+    "faceblur.wasm"
 ]
 
 [models]
 download = true
 
-[server]
-mcp-enable = false
-mcp-port = ":5001"
+[configuration]
+detect-draw-faces="false"

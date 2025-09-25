@@ -1,6 +1,6 @@
 project_name: videodrone
 
-pre_window: gvm use go1.23
+pre_window: gvm use go1.25
 
 windows:
   - main:

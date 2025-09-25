@@ -33,7 +33,7 @@ ollama.wasm--prompt result-->Datastore
 flowchart LR
 
 subgraph motor wasmVision
-    OpenCV<--DNN-->DNN[Modelo de transferencia rápida de estilo neuronal - mosaic, pointilism, etc]
+    OpenCV<--DNN-->DNN[Rapid neural style transfer model - mosaic, pointilism, etc]
 end
 
 styletransfer.wasm-->OpenCV
@@ -66,7 +66,7 @@ captions.wasm--frame-->Output
 subgraph motor wasmVision
     Capture
     Capture<-->OpenCV
-    OpenCV<--DNN-->DNN[Modelo de transferencia rápida de estilo neuronal - mosaic, pointilism, etc]
+    OpenCV<--DNN-->DNN[Rapid neural style transfer model - mosaic, pointilism, etc]
     http
     Datastore
     Output

@@ -88,7 +88,7 @@
 			</div>
 			<h3>GoCV.io</h3>          
 		</section>
-
+		
 		<section>
 			<div class="image-container">
 				<img src="images/opencv-logo.png">
@@ -102,6 +102,22 @@
           </div>
           <h3>golang.org</h3>
         </section>
+
+		<section>
+			<h2>GoCV current stats</h2>
+		</section>
+
+		<section>
+			<h2>7.2k+ stars</h2>
+		</section>
+
+		<section>
+			<h2>890+ forks</h2>
+		</section>
+
+		<section>
+			<h2>150+ contributors</h2>
+		</section>
 
 		<section>
           <section>
@@ -220,7 +236,7 @@ func main() {
 
 			<section>
 				<h2>main.go</h2>
-				<h3><a target="_blank" href="">See the code</a></h3>
+				<h3><a target="_blank" href="https://github.com/deadprogram/opencv-live-2025/blob/main/demo/yolo-detection/main.go">See the code</a></h3>
 			</section>
                 
 			<section>
@@ -553,7 +569,7 @@ func main() {
 
 		<section>
 			<h2>wasmCV Docs</h2>
-			<h3><a target="_blank" href="https://wasmcv.org/docs/0.7.0/#a-idwasm_cv_mataimport-interface-wasmcvmat">See the code</a></h3>
+			<h3><a target="_blank" href="https://wasmcv.org/docs/0.8.1/#a-idwasm_cv_mataimport-interface-wasmcvmat">See the docs</a></h3>
 		</section>
 
 		<section>
@@ -717,7 +733,7 @@ cargo build --target wasm32-unknown-unknown --release
 		</section>
 
 		<section>
-			<h2>Creative Captioning</h2>
+			<h2>Creative Captions</h2>
 		</section>
 
 		<section>
@@ -727,9 +743,9 @@ cargo build --target wasm32-unknown-unknown --release
 
 		<section>
 			<div class="image-container">
-				<img src="images/wasmvision-ollama.png">
+				<img src="images/creativecaptions-pipeline.png">
 			</div>
-			<h3>Creative Captioning architecture</h3>
+			<h3>Creative Captions pipeline</h3>
 		</section>
 
 		<section>
@@ -738,18 +754,46 @@ cargo build --target wasm32-unknown-unknown --release
 		</section>
 
 		<section>
+			<div class="image-container">
+				<img src="images/creativecaptions-ollama.png">
+			</div>
+			<h3>Ollama processor</h3>
+		</section>
+
+		<section>
 			<h2>ollama processor (Go)</h2>
 			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/ollama/ollama.go">See the code</a></h3>
 		</section>
 
 		<section>
-			<h2>mosaic processor (Go)</h2>
-			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/mosaic/mosaic.go">See the code</a></h3>
+			<div class="image-container">
+				<img src="images/creativecaptions-styletransfer.png">
+			</div>
+			<h3>style-transfer processor</h3>
+		</section>
+
+		<section>
+			<h2>style-transfer processor (Go)</h2>
+			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/style-transfer/style.go">See the code</a></h3>
+		</section>
+
+		<section>
+			<div class="image-container">
+				<img src="images/creativecaptions-captions.png">
+			</div>
+			<h3>captions processor</h3>
 		</section>
 
 		<section>
 			<h2>captions processor (Go)</h2>
 			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/captions/captions.go">See the code</a></h3>
+		</section>
+
+		<section>
+			<div class="image-container">
+				<img src="images/creativecaptions-all.png">
+			</div>
+			<h3>captions full architecture</h3>
 		</section>
 
 		<section>
@@ -819,8 +863,18 @@ cargo build --target wasm32-unknown-unknown --release
 		</section>
 
 		<section>
+			<h2>face-counter processor (Go)</h2>
+			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/face-counter/counter.go">See the code</a></h3>
+		</section>
+
+		<section>
+			<h2>faceblur processor (Go)</h2>
+			<h3><a target="_blank" href="https://github.com/wasmvision/wasmvision/blob/main/processors/faceblur/faceblur.go">See the code</a></h3>
+		</section>
+
+		<section>
 			<h2>videodrone Code</h2>
-			<h3><a target="_blank" href="https://github.com/deadprogram/wasmio2025/blob/main/demo/videodrone/main.go">See the code</a></h3>
+			<h3><a target="_blank" href="https://github.com/deadprogram/opencv-live-2025/blob/main/demo/videodrone/main.go">See the code</a></h3>
 		</section>
 
 		<section>
@@ -835,7 +889,7 @@ cargo build --target wasm32-unknown-unknown --release
 		</section>
 
 		<section>
-			<h2>version 0.5 coming soon!</h2>
+			<h2>wasmvision version 0.5 coming soon!</h2>
 		</section>
 
 		<section>
@@ -874,10 +928,6 @@ cargo build --target wasm32-unknown-unknown --release
 
 		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 		transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
-
-		// Parallax scrolling
-		// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-		// parallaxBackgroundSize: '2100px 900px',
 
 		// Optional libraries used to extend on reveal.js
 		dependencies: [
