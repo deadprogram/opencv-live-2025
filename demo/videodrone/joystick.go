@@ -36,12 +36,12 @@ func startJoystick() {
 	})
 
 	stick.On(joystick.TrianglePress, func(data interface{}) {
-		drone.ThrowTakeOff()
+		drone.TakeOff()
 		println("Takeoff")
 	})
 
 	stick.On(joystick.XPress, func(data interface{}) {
-		drone.PalmLand()
+		drone.Land()
 		println("Land")
 	})
 
