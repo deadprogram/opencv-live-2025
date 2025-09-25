@@ -1,6 +1,6 @@
-# WASM I/O 2025
+# OpenCV Live - Sept. 25 2025
 
-## "Seeing Eye To Eye: Computer Vision Using WebAssembly"
+## "OpenCV For Go And WebAssembly"
 
 Copyright 2018-2025 Ron Evans.
 

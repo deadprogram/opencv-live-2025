@@ -1,5 +1,11 @@
 .ONESHELL:
 
+hello:
+	go run ./demo/hello 2
+
+yolo:
+	go run ./demo/yolo-detection 0 /home/ron/models/yolov8s.onnx cuda cuda
+
 showvideo:
 	wasmvision run -p hello -logging=error --source 2
 
@@ -31,7 +37,7 @@ mosaic:
 	wasmvision run -p mosaic -logging=error
 
 captions:
-	wasmvision run -f ./demo/creativecaptions/config.toml
+	wasmvision run -f ./demo/creativecaptions/config.yaml
 
 dronestream:
 	wasmvision run -f ./demo/videodrone/config.toml

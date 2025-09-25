@@ -4,9 +4,9 @@
 <head>
 <meta charset="utf-8">
 
-<title>Seeing Eye To Eye - WASM I/O 2025</title>
+<title>OpenCV for Go and WebAssembly - OpenCV Live</title>
 
-<meta name="description" content="Seeing Eye To Eye - WASM I/O 2025">
+<meta name="description" content="OpenCV for Go and WebAssembly - OpenCV Live">
 <meta name="author" content="Ron Evans">
 
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -39,9 +39,8 @@
 	<div class="slides">
 		<section>
 			<section>
-				<h1>Seeing Eye To Eye:</h1>
-				<h1>Computer Vision Using WebAssembly</h1>
-				<h2>WASM I/O 2025</h2>
+				<h1>OpenCV for Go and WebAssembly</h1>
+				<h1>OpenCV Live</h1>
 				<h2>Ron Evans - @deadprogram</h2>
 				<h3>fed: @deadprogram@social.tinygo.org</h3>
 				<h3>bsky: @deadprogram.com</h3>	
@@ -91,7 +90,239 @@
 		</section>
 
 		<section>
+			<div class="image-container">
+				<img src="images/opencv-logo.png">
+			</div>
+			<h2>OpenCV</h2>
+		</section>
+
+		<section>
+          <div class="image-container">
+            <img src="images/Go-Logo_Fuchsia.png">
+          </div>
+          <h3>golang.org</h3>
+        </section>
+
+		<section>
+          <section>
+            <h2>Why you should use Go<br>for computer vision</h2>
+          </section>
+
+          <section>
+            <h2>Concurrency</h2>
+          </section>
+
+          <section>
+            <h2>Portability</h2>
+          </section>
+
+          <section>
+            <h2>Performance</h2>
+          </section>
+        </section>
+
+		<section>          
+          <section>
+            <h2>Linux</h2>
+          </section>
+
+          <section>
+            <h2>mac os</h2>
+          </section>
+
+          <section>
+            <h2>Windows</h2>
+          </section>
+
+          <section>
+            <h2>Yes, I said Windows</h2>
+          </section>
+        </section>
+
+		<section>
+			<section>
+				<h2>How Computer Vision Works</h2>
+			</section>
+
+			<section>
+				<div class="image-container">
+					<img src="images/mat-base.jpg">
+				</div>
+				<h2>Mat</h2>
+			</section>
+
+			<section>
+				<div class="image-container">
+					<img src="images/mat-2d3c.jpg">
+				</div>
+				<h2>RGB Mat</h2>
+			</section>
+
+			<section>
+				<div class="image-container">
+					<img src="images/how-gocv-works.png">
+				</div>
+				<h2>How OpenCV/GoCV Works</h2>
+			</section>
+		</section>
+
+        <section>
+          <section>
+            <h2>The "Hello, world" of video</h2>
+          </section>
+
+          <section>
+            <pre><code class="golang">
+package main
+
+import (
+    "gocv.io/x/gocv"
+)
+
+func main() {
+	webcam, _ := gocv.OpenVideoCapture(0)
+	window := gocv.NewWindow("GoCV")
+	img := gocv.NewMat()
+
+	for {
+		webcam.Read(&img)
+		window.IMShow(img)
+		gocv.WaitKey(1)
+	}
+}
+            </code></pre>
+          </section>
+                
+          <section>
+            <h2>Demo</h2>
+          </section>
+        </section>
+
+		<section>
+			<section>
+				<h2>Real-time Object Detection Using YOLO</h2>
+			</section>
+
+			<section>
+				<div class="image-container">
+					<img src="images/1D_Convolutional_Neural_Network_feed_forward_example.png">
+				</div>
+				<h3>Convolutional Neural Network</h3>
+			</section>
+
+			<section>
+				<h2>DNN</h2>
+			</section>
+
+			<section>
+				<h2>CUDA</h2>
+			</section>
+
+			<section>
+				<h2>main.go</h2>
+				<h3><a target="_blank" href="">See the code</a></h3>
+			</section>
+                
+			<section>
+				<h2>Demo</h2>
+			</section>
+        </section>
+
+		<section>
+			<h2>A pause for some questions</h2>
+		</section>
+
+		<section>
+			<div class="image-container">
+				<img src="images/wasmvision-logo.png">
+			</div>
+			<h2>wasmvision.com</h2>
+		</section>
+
+		<section>
 			<h2>computer vision using WebAssembly?</h2>
+		</section>
+
+		<section>
+			<section>
+				<h2>But what is WebAssembly?</h2>
+			</section>
+
+			<section>
+				<div class="image-container">
+				  <img src="images/webassembly-logo.png">
+				</div>
+				<h3>webassembly.org</h3>          
+			</section>
+
+			<section>
+				<h2>bytecode</h2>
+			</section>
+
+			<section>
+				<h2>interfaces</h2>
+			</section>
+		</section>
+
+		<section>
+			<h2>wasm in the browser</h2>
+		</section>
+
+		<section>
+			<div class="image-container">
+				<img src="images/wasmbrowser-arch.png">
+			</div>
+			<h3>wasm browser architecture</h3>
+		</section>
+
+		<section>
+			<h2>Vita</h2>
+			<h3>Conway's Game Of Life in WebAssembly</h3>
+			<h3><a target="_blank" href="https://alessandrocifani.com/vita/">See Vita</a></h3>
+		</section>
+
+		<section>
+			<h2>wasm in the cloud</h2>
+		</section>
+
+		<section>
+			<div class="image-container">
+				<img src="images/fermyon-logo.png">
+			</div>
+			<h3>fermyon spin</h3>
+		</section>
+
+		<section>
+			<div class="image-container">
+				<img src="images/cosmonic-logo.png">
+			</div>
+			<h3>Cosmonic wasmCloud</h3>
+		</section>
+
+		<section>
+			<div class="image-container">
+				<img src="images/fastly-logo.png">
+			</div>
+			<h3>Fastly CDK</h3>
+		</section>
+
+		<section>
+			<h2>Webassembly System Interface (wasi)</h2>
+		</section>
+
+		<section>
+			<div class="image-container">
+				<img src="images/wasi-arch.png">
+			</div>
+			<h3>wasi architecture</h3>
+		</section>
+
+		<section>
+			<h2>wasm on embedded</h2>
+		</section>
+
+		<section>
+			<h2>wasm-unknown</h2>
 		</section>
 
 		<section>
@@ -234,12 +465,6 @@
 
 		<section>
 			<div class="image-container">
-				<img src="images/voltron___final_model_by_cosedimarco.jpg">
-			</div>  
-		</section>
-
-		<section>
-			<div class="image-container">
 				<img src="images/wasmvision-arch.png">
 			</div>
 			<h2>wasmvision architecture</h2>
@@ -293,33 +518,6 @@
 		<section>
 			<h2>wypes</h2>
 			<h3>github.com/orsinium-labs/wypes</h3>
-		</section>
-
-		<section>
-			<section>
-				<h2>How Computer Vision Works</h2>
-			</section>
-
-			<section>
-				<div class="image-container">
-					<img src="images/mat-base.jpg">
-				</div>
-				<h2>Mat</h2>
-			</section>
-
-			<section>
-				<div class="image-container">
-					<img src="images/mat-2d3c.jpg">
-				</div>
-				<h2>RGB Mat</h2>
-			</section>
-
-			<section>
-				<div class="image-container">
-					<img src="images/how-gocv-works.png">
-				</div>
-				<h2>How OpenCV/GoCV Works</h2>
-			</section>
 		</section>
 
 		<section>
@@ -388,7 +586,7 @@ tinygo build -o blur.wasm -target=wasm-unknown --no-debug ./blur
 			<h2>Run Blur processor (Go)</h2>
 		</section>
 
-		<section data-background-image="http://localhost:8080" data-background-size="contain">
+		<section data-background-image="http://localhost:8080" data-background-size="contain" data-state="stats">
 		</section>
 
 		<section>
@@ -536,7 +734,7 @@ cargo build --target wasm32-unknown-unknown --release
 
 		<section>
 			<h2>config.toml</h2>
-			<h3><a target="_blank" href="https://github.com/deadprogram/wasmio2025/blob/main/demo/creativecaptions/config.toml">See the config</a></h3>
+			<h3><a target="_blank" href="https://github.com/deadprogram/opencv-live-2025/blob/main/demo/creativecaptions/config.toml">See the config</a></h3>
 		</section>
 
 		<section>
@@ -600,7 +798,7 @@ cargo build --target wasm32-unknown-unknown --release
 			<div class="image-container">
 				<img src="images/how-dnn-facedetect-works.png">
 			</div>
-			<h2>How Computer Vision Models Work</h2>
+			<h2>Face detection</h2>
 		</section>
 
 		<section>
@@ -612,7 +810,7 @@ cargo build --target wasm32-unknown-unknown --release
 
 		<section>
 			<h2>config.toml</h2>
-			<h3><a target="_blank" href="https://github.com/deadprogram/wasmio2025/blob/main/demo/videodrone/config.toml">See the config</a></h3>
+			<h3><a target="_blank" href="https://github.com/deadprogram/opencv-live-2025/blob/main/demo/videodrone/config.toml">See the config</a></h3>
 		</section>
 
 		<section>
@@ -637,7 +835,7 @@ cargo build --target wasm32-unknown-unknown --release
 		</section>
 
 		<section>
-			<h2>version 0.3 available now!</h2>
+			<h2>version 0.5 coming soon!</h2>
 		</section>
 
 		<section>
@@ -691,6 +889,10 @@ cargo build --target wasm32-unknown-unknown --release
 		  { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
 		]
 	  });
+
+	  Reveal.addEventListener( 'video-player', function() {
+			console.log( 'stats called!' );
+		});
 
 	</script>
 

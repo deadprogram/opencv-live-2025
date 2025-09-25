@@ -1,17 +1,19 @@
 [main]
-logging = "warn"
+logging = "info"
 destination = ":8080"
 cuda-enable = true
 
 [processing]
 pipeline = [
     "ollama.wasm",
-    "mosaic.wasm",
+    "style-transfer.wasm",
     "captions.wasm"
 ]
-configuration = [
-    "model=qnguyen3/nanollava"
-]
+
+[configuration]
+ollama-model = "qnguyen3/nanollava"
+caption-line-height = "30"
+caption-size = "0.9"
 
 [models]
 download = true
